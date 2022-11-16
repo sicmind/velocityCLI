@@ -1,0 +1,17 @@
+{
+  "name": "velocitycli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sic",
+  "license": "ISC",
+  "bin": {
+    "velo": "./bin/index.js"
+  },
+  "dependencies": {
+    "yargs": "^17.6.0"
+  }
+}
