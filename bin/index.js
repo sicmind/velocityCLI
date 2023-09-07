@@ -26,16 +26,16 @@ const options = yargs
 var file = `${cwd}/${yargs.argv['f']}`
 
 velocity_parse = (f) => {
-  console.log(sdir)
+  //console.log(sdir)
   exec(`java -jar ${sdir}/java/velocity-validator-1.0.jar -preloadJars="${sdir}/java/commons-lang3-3.12.0.jar" -preloadVars="stringUtils:org.apache.commons.lang.StringUtils" -file=${f} -eval`,
     function (error, stdout, stderr) {
-      //  console.log("--------------------------------------")
+      console.log("--------------------------------------")
       console.log(stdout);
       //  console.log(stderr);
       if (error !== null) {
         console.log('exec error: ' + error);
       }
-      //   console.log("--------------------------------------")
+         console.log("--------------------------------------")
     });
 }
 
