@@ -3,9 +3,11 @@
 const fs = require("fs");
 const yargs = require("yargs")
 const exec = require('child_process').exec
+const path = require('path')
 
 const sdir = __dirname
 const cwd = process.cwd()
+
 
 const usage = "\nUsage: velo -f <filename.vm>";
 const options = yargs
@@ -23,7 +25,7 @@ const options = yargs
 
 //console.log(yargs.argv)
 //console.log(yargs.argv['f'])
-var file = `${cwd}/${yargs.argv['f']}`
+var file = path.join(cwd, yargs.argv['f']).replace(/(\s+)/g, '\\$1')
 
 velocity_parse = (f) => {
   //console.log(sdir)
